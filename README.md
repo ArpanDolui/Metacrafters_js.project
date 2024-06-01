@@ -1,12 +1,11 @@
 # Metacrafters_js.project
 project of NFTs
 
-let numberOfNFTs = 0; //  Number type Variable to hold the total number of NFTs
-let nfts = []; // Array to hold the metadata of all NFTs
+let numberOfNFTs = 0; 
+let nfts = []; 
 
-// Function to mint an NFT and store its metadata
+
 function mintNFT(stdname, uid, address, cgpa, imageURI) {
-    // Create an object to hold metadata for the NFT
     let meta_data = {
         // list of metadata variable are (name,uid,address,cgpa,imageURI)
         name: stdname,
@@ -15,8 +14,6 @@ function mintNFT(stdname, uid, address, cgpa, imageURI) {
         cgpa:cgpa,
         imageURI: imageURI
     };
-
-    // Store the NFT metadata
     nfts.push(meta_data);
     numberOfNFTs++;
 }
@@ -29,17 +26,15 @@ function listNFTs() {
         console.log("Address: " + nft.address);
         console.log("CGPA: " + nft.cgpa);
         console.log("Image URI: " + nft.imageURI);
-        
         console.log("\n");
     });
 }
 
-// Function to get the total number of NFTs
+
 function getnumberOfNFTs() {
     return numberOfNFTs;
 }
 
-// Example usage
 mintNFT("Arpan Dolui", "22BCS10470", "Kolkata,West Bengal","6.00","file:///C:/Users/arpan/Downloads/WhatsApp%20Image%202024-05-31%20at%2011.51.25%20AM.jpeg", );
 mintNFT("Pravash Kumar Behara", "22BCS10464","Cuttack,Odisha","7.30", "file:///C:/Users/arpan/Downloads/WhatsApp%20Image%202024-05-31%20at%2011.51.25%20AM.jpeg", );
 mintNFT("Ankit Dhua", "22BCS10360","Bakura, West Bengal","7.00", "file:///C:/Users/arpan/Downloads/WhatsApp%20Image%202024-05-31%20at%2011.51.25%20AM.jpeg", );
@@ -48,5 +43,5 @@ console.log("Total number of NFTs:", getnumberOfNFTs());
 
 console.log("\nList of NFTs:");
 listNFTs();
-//By defaulult print statement.
+
 console.log("Thankyou visit again.");
