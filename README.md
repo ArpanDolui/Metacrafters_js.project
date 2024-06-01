@@ -7,7 +7,6 @@ let nfts = [];
 
 function mintNFT(stdname, uid, address, cgpa, imageURI) {
     let meta_data = {
-        // list of metadata variable are (name,uid,address,cgpa,imageURI)
         name: stdname,
         uid:uid,
         address:address,
